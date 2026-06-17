@@ -3,15 +3,21 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const button = document.querySelector(".counter") as HTMLButtonElement;
+  
+  if (count === 10){
+    button.style.backgroundColor = "green";
+    button.style.color = "white";
+}
 
   return (
     <>
       <section id="center">
         
         <div>
-          <h1>Get started</h1>
+          <h1>Vamos começar!</h1>
           <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+            Edite <code>src/App.tsx</code> e salve para testar <code>HMR</code>
           </p>
         </div>
         <button
@@ -19,7 +25,7 @@ function App() {
           className="counter"
           onClick={() => setCount((count) => count + 1)}
         >
-          Count is {count}
+          Contar é {count}
         </button>
       </section>
     </>
